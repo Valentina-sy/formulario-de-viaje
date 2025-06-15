@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulario de Cotización de Viajes</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h1>Formulario de Cotización de Viajes</h1>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Datos del Cliente</legend>
+        <div class="grid">
+          <div>
+            <label for="nombre">Nombre completo:</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Nombre completo" autofocus maxlength="50" />
+          </div>
+          <div>
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo" required placeholder="ejemplo@correo.com" />
+          </div>
+          <div>
+            <label for="telefono">Número de teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{8}" placeholder="12345678" />
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Información del Viaje</legend>
+        <div class="grid">
+          <div>
+            <label for="pais">País de destino:</label>
+            <select id="pais" name="pais" required>
+              <option value="">Selecciona un país</option>
+              <option>Italia</option>
+              <option>Japón</option>
+              <option>México</option>
+              <option>Canadá</option>
+              <option>Colombia</option>
+              <option>Peru</option>
+
+            </select>
+          </div>
+          <div>
+            <label for="salida">Fecha de salida:</label>
+            <input type="date" id="salida" name="salida" required />
+          </div>
+          <div>
+            <label for="regreso">Fecha de regreso:</label>
+            <input type="date" id="regreso" name="regreso" required />
+          </div>
+          <div>
+            <label for="personas">Cantidad de personas:</label>
+            <input type="number" id="personas" name="personas" min="1" max="20" required />
+          </div>
+          <div>
+            <label>Tipo de paquete:</label>
+            <label><input type="radio" name="paquete" value="Economico" required /> Económico</label>
+            <label><input type="radio" name="paquete" value="Estandar" /> Estándar</label>
+            <label><input type="radio" name="paquete" value="VIP" /> VIP</label>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferencias y Comentarios</legend>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="servicios" value="Hotel" /> Hotel</label>
+          <label><input type="checkbox" name="servicios" value="Transporte" /> Transporte</label>
+          <label><input type="checkbox" name="servicios" value="Seguro" /> Seguro</label>
+          <label><input type="checkbox" name="servicios" value="Guía" /> Guía</label>
+        </div>
+
+        <label for="comentarios">Comentarios del cliente:</label>
+        <textarea id="comentarios" name="comentarios" placeholder="Escriba sus comentarios aquí..." rows="4"></textarea>
+
+        <label for="archivo">Adjuntar pasaporte escaneado (PDF):</label>
+        <input type="file" id="archivo" name="archivo" accept=".pdf" />
+      </fieldset>
+
+      <div class="botones">
+        <button type="submit">Enviar Cotización</button>
+        <button type="reset">Restablecer Formulario</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

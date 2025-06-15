@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #f2e146, #e63487);
+  padding: 30px;
+  margin: 0;
+}
+
+.form-container {
+  max-width: 800px;
+  margin: auto;
+  background-color: rgb(241, 100, 161);
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #003366;
+}
+
+form fieldset {
+  border: 1px solid #ee84b2;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+legend {
+  font-weight: bold;
+  color: #003366;
+  padding: 0 10px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select,
+textarea,
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  transition: border 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #0097a7;
+  outline: none;
+}
+
+input:invalid {
+  border-color: #ff6f61;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.radio-group label,
+.checkbox-group label {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.botones {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+button {
+  padding: 12px 25px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #005599;
+}
